@@ -1,0 +1,13 @@
+{
+  "name": "rabbit-pair",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "latest",
+    "archiver": "^7.0.1",
+    "express": "^5.1.0",
+    "pino": "^10.0.0"
+  }
+}
