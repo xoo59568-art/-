@@ -1,13 +1,17 @@
 {
-  "name": "rabbit-pair",
-  "main": "index.js",
+  "name": "rabbitxmd-session-generator",
+  "version": "1.0.0",
+  "description": "RabbitXMD WhatsApp Session ID Generator",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "latest",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "@hapi/boom": "^10.0.1",
     "archiver": "^7.0.1",
-    "express": "^5.1.0",
-    "pino": "^10.0.0"
+    "express": "^4.19.2",
+    "pino": "^9.3.2",
+    "socket.io": "^4.7.5"
   }
 }
