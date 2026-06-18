@@ -1,0 +1,52 @@
+<input id="number" placeholder="9173xxxxxxx">
+<button onclick="pair()">
+Generate Pair Code
+</button>
+
+<h3 id="code"></h3>
+<textarea
+  id="session"
+  rows="6"
+  cols="50"
+></textarea>
+
+<script>
+async function pair() {
+  const number =
+    document.getElementById("number")
+      .value;
+
+  const r = await fetch(
+    `/api/pair?number=${number}`
+  );
+
+  const j = await r.json();
+
+  document.getElementById(
+    "code"
+  ).innerText =
+    "Pair Code: " + j.code;
+
+  const timer = setInterval(
+    async () => {
+      const s =
+        await fetch(
+          `/api/session?number=${number}`
+        );
+
+      const d =
+        await s.json();
+
+      if (d.sessionId) {
+        clearInterval(timer);
+
+        document.getElementById(
+          "session"
+        ).value =
+          d.sessionId;
+      }
+    },
+    3000
+  );
+}
+</script>
