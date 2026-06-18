@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.9",
+    "@whiskeysockets/baileys": "latest",
     "@hapi/boom": "^10.0.1",
     "archiver": "^7.0.1",
     "express": "^4.19.2",
